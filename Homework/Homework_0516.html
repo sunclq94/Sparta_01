@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자라X조말론</title>
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Nanum+Gothic&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        function hey() {
+            if ($('#user_name').val()=='') {
+                alert('이름을 입력하시오!');
+            }
+            else if ($('#user_address').val()=='') {
+                alert('주소를 입력하시오!');
+            }
+            else if ($('#no_order').val()=='--주문수량--') {
+                alert('수량을 선택하시오!');
+            }
+            else if ($('#user_number').val()=='') {
+                alert('전화번호를 입력하시오!');
+            }
+            else {
+                alert('주문 완료!');
+            }
+        }
+    </script>
+
+    <!-- CSS -->
+    <style>
+        .wrap {
+            margin: 30px auto 50px;
+            width: 800px;
+            padding-top: 10px;
+        }
+
+        .first-body {
+            text-align: center;
+        }
+
+        .PrdImage {
+            width: 500px;
+            height: 500px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .second-body {
+            font-family: 'Kirang Haerang', cursive;
+            font-family: 'Nanum Gothic', sans-serif;
+            margin: 20px;
+        }
+        .button {
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="first-body">
+            <h1> ZARA Emotions Collection </h1>
+            <hr>
+            <img class="PrdImage" src="http://img.vogue.co.kr/vogue/2020/05/style_5eb8adf4f295e.jpg">
+            <hr>
+            <h1> EBONY WOOD <span style="font-size: 12pt"> 가격: 49,000원 / 개 </span> </h1>
+            <br>
+            <h3>"곧, 자유로운 순간과 아무 걱정 없는 모험의 시간이 시작됩니다."</h3>
+            <br>
+            <h5> 이 향은 페퍼콘, 정향, 흑단 나무를 담았습니다. </h4>
+        </div>
+        <div class="second-body">
+            <hr>
+            <h2> 주문하기 </h2>
+            <br>
+            <form>
+                <div class="input-group mb-3" id="try_again">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">주문자 성함:</span>
+                    </div>
+                    <input type="text" id= "user_name"class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">배달 주소:</span>
+                    </div>
+                    <input type="text" id = "user_address" class="form-control" placeholder="Address" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">주문 수량:</span>
+                    </div>
+                    <select class="custom-select" id="no_order">
+                        <option selected>--주문수량--</option>
+                        <option value="1">1개</option>
+                        <option value="2">2개</option>
+                        <option value="3">3개</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">전화번호:</span>
+                    </div>
+                    <input type="text" id="user_number" class="form-control" placeholder="Phone Number" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+        </div>
+        <div class="button">
+            <br>
+            <button onclick="hey()" type="submit" class="btn btn-primary">주문하기</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
