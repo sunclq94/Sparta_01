@@ -11,18 +11,12 @@ data = requests.get('https://www.genie.co.kr/chart/top200?ditc=D&ymd=20200403&hh
 soup = BeautifulSoup(data.text, 'html.parser')
 list = soup.select('#body-content > div.newest-list > div > table > tbody > tr')
 
+rank = 0
 for music in list:
     a_tag= music.select_one('td > a')
     if a_tag is not None:
-        title = music.select_one('a.title.ellipsis').text
-        artist = music.select_one('a.artist.ellipsis').text                               
-        print(title,artist)
-        
-  #      print(a_tag.text)
-#for music in list :
-  
-#print(music)
-
-
-#body-content > div.newest-list > div > table > tbody > tr:nth-child(1) > td.info > a.title.ellipsis
-#body-content > div.newest-list > div > table > tbody > tr:nth-child(1) > td.info > a.artist.ellipsis
+        rank = rank + 1
+        title = music.select_one('a.title.ellipsis').text.strip()
+        artist = music.select_one('a.artist.ellipsis').text.strip() 
+                
+        print(rank,title,artist)
